@@ -10,26 +10,26 @@ dim(dataset)
 summary(dataset)
 head(dataset)
 
-# Step 2. Make plots
-plot(x = Year, y = M.bovis, 
+# Step 3. Make plots
+plot(x = Year, y = MDR, 
      pch = 16, xlab = "Year", 
-     ylab = "Case notification for bovine TB",
-     main = "Figure 1. Case notifications for bovine TB in humans per year")
+     ylab = "Case notifications for Bovine TB",
+     main = "Case notifications for Bovine TB in humans per year")
 
-# Step 3. Create a linear model for M.bovis data and summarise
+# Step 4. Create a linear model for M.bovis data and summarise
 M.bovis_model <- lm(M.bovis ~ Year)
 summary(M.bovis_model)
 
-# Step 4. Plot residuals vs fitted and qq-plot
+# Step 5. Plot residuals vs fitted and qq-plot
 plot(M.bovis_model, which = 1:2, add.smooth = FALSE)
 
-# Step 5. Plot fitted line
+# Step 6. Plot fitted line
 plot(x = Year, y = M.bovis, 
      xlab = "Year", ylab = "Case notifications for Bovine TB")
 
 abline(M.bovis_model)
 
-# Step 6. Calculate confidence intervals
+# Step 7. Calculate confidence intervals
 confint(M.bovis_model)
 
 # Step 7. Predict values for next three years
