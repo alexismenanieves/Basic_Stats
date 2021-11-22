@@ -19,6 +19,7 @@ plot(x = Year, y = MDR,
 # Step 4. Create a linear model for M.bovis data and summarise
 M.bovis_model <- lm(M.bovis ~ Year)
 summary(M.bovis_model)
+anova(M.bovis_model)
 
 # Step 5. Plot residuals vs fitted and qq-plot
 plot(M.bovis_model, which = 1:2, add.smooth = FALSE)
