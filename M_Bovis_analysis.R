@@ -1,5 +1,6 @@
 # Step 0. Load libraries and functions ------------------------------------
 library(stats)
+library(graphics)
 
 # Step 1. Load data -------------------------------------------------------
 dataset <- read.csv("data/TB_data.csv")
